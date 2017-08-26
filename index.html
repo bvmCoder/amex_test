@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fetch URL Code for Tag Highlight</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+	    #err {
+	        visibility: hidden;
+	    }
+
+	    #loading {
+	        display: none;
+	        position: absolute;
+	        width: 50%;
+	        height: 50%;
+	        background: url('loading.gif') no-repeat center center;
+	    }
+    </style>
+</head>
+
+<body>
+    <div class="form-inline">
+        <div class="form-group">
+            <input class="form-control" type="url" id="srcUrl" placeholder="Enter URL to fetch" />
+            <button class="btn btn-outline-primary" onclick="fetchUrl()">Fetch</button>
+            <div id="loading"></div>
+        </div>
+    </div>
+    <h4 id="err" class="text-info">Click on or close to a new tag for highlighting</h4>
+    <p id="htmlContent"></p>
+    <script type="text/javascript" src="./js/app.js"></script>
+</body>
+
+</html>
